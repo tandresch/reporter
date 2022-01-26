@@ -2,13 +2,10 @@ podTemplate(inheritFrom: 'mypod', containers: [
     containerTemplate(name: 'maven', image: 'maven:3.8.1-jdk-11')
   ]) {
   node(POD_LABEL) {
+       stage('build') {
        
-	   
-	   // some steps
-		stage('build') {
-            steps {
-                sh 'mvn --version'
-            }
-        }
+	   sh 'mvn --version'
+
+       }
   }
 } 
