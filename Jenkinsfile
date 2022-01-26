@@ -3,12 +3,10 @@ podTemplate(inheritFrom: 'mypod', containers: [
   ]) {
   node(POD_LABEL) {
        
-	   
-	   // some steps
-		stage('build') {
-            steps {
-                sh 'mvn --version'
-            }
+	   stage('build') {
+            
+           sh 'mvn --version'
+            
         }
   }
 } 
